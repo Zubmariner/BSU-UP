@@ -1,0 +1,18 @@
+$ git log
+commit 6283e25a5ea962da167bea7bc4dace86c6472637 (HEAD -> master)
+Author: Zubmariner <kamiwa@tut.by>
+Date:   Tue Feb 6 12:22:48 2018 +0300
+
+    Task1/status.txt
+
+commit 2f3a83eabb3eeb8d4bd4ee724f8c50acb54a2de0
+Author: Zubmariner <kamiwa@tut.by>
+Date:   Tue Feb 6 12:21:11 2018 +0300
+
+    add.gitignore
+
+commit ef9436709069c9515e1bb48baa8694262e3ca597
+Author: Zubmariner <kamiwa@tut.by>
+Date:   Tue Feb 6 12:10:36 2018 +0300
+
+    add.gitignore
