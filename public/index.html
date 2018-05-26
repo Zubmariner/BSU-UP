@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feed</title>
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+</head>
+<body>
+<div class="modal-container" id="mc-id">
+</div>
+<header id="header">
+    <span class="title"><img src="img/logo.png"></span>
+    <span class="user"><img src="img/user.png"></span>
+</header>
+
+<main>
+    <div class="menu">
+        <button class="add" id="add-post-button">
+            <span class="add-photo">Add photo</span>
+            <i class="fas fa-plus"></i>
+        </button>
+        <select class="search-select" id="search-select">
+            <option>Filter by hashtags</option>
+            <option>Filter by author</option>
+            <option>Filter by date</option>
+        </select>
+        <form class="search-box">
+            <input type="text" class="search" id="search-box"/>
+
+        </form>
+        <button class="search-button" id="search-button-id">Search</button>
+    </div>
+
+    <div class="main">
+        <div class="posts" id="#posts-container"></div>
+    </div>
+    <button class="load-more" id="load-more-button">Load more</button>
+    <footer>
+        <span class="title-foot">subMARINE © 2018</span>
+        <span class="author">Mikhail Kalach BSU, 2 year, 8 group</span>
+        <span class="email">kamiwa@tut.by</span>
+    </footer>
+</main>
+
+</body>
+<script src="data.js"></script>
+<script src="postRenderer.js"></script>
+<script src="postManager.js"></script>
+<script src="invoker.js"></script>
+
+<script src="init.js"></script>
+<!--<script src="logs.js"></script>-->
+
+</html>
