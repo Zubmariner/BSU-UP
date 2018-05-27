@@ -6,14 +6,12 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+	background-color: #eef;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-}
-
-input {
 }
 
 .description-ed {
@@ -32,13 +30,15 @@ input {
 }
 
 .modal {
-    width: 50%;
-    min-width: 21rem;
-    min-height: 20rem;
-    height: 70%;
+    width: 30%;
+    min-width: 20rem;
+    min-height: 18rem;
     background-color: white;
     display: flex;
     flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
 }
 
 .modal-img-container{
@@ -46,8 +46,6 @@ input {
     display: flex;
     overflow: hidden;
     justify-content: center;
-
-
 }
 
 .modal-post-img {
@@ -56,16 +54,28 @@ input {
 }
 
 .edit-content {
+	font-size: 1.2rem;
+	background-color: #003;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem;
 }
 
 .edit-div {
+	margin: 0.03rem;
+	color: #AA0;
     display: flex;
     flex-direction: column;
+	padding: 0.3rem;
+}
+
+.submit-edit {
+	background-color: #356;
+	font-size: 1.2rem;
+	border-radius: 1rem;
+	margin-top: 0.5rem;	
 }
 
 div {
@@ -80,10 +90,10 @@ button {
 }
 
 header {
-   min-height: 3.5rem;
+    min-height: 3.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-	background-color: #003;
+	background-color: #004;
     display: flex;
     flex-direction: row;
 
@@ -101,7 +111,7 @@ header > .user-info {
 	flex-grow: 1.2;
     flex-direction: column;
     justify-content: center;
-    color: #CC0;
+    color: #FF8;
 }
 
 header > .user {
@@ -125,8 +135,8 @@ main {
 .posts {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
@@ -140,24 +150,32 @@ main > .main {
 }
 
 main > .menu {
-    min-height: 3.2rem;
-    background-color: #002;
+	position: fixed;
+    min-height: 100%;
+	width: 15rem;
+    background: url(img/menu_background.png) no-repeat;
+	background-size: 100%;
     display: flex;
 	justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+	flex-grow: 1;
     align-items: center;
 }
 
 .add {
-    display: flex;
-    flex-direction: row;
+	cursor: pointer;
+    margin-left: -1.6rem;
+	display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: inherit;
-	flex-grow: 1;
+	flex-grow: 0.7;
     border: 0;
 }
 
 .add-photo {
+	display: flex;
+    flex-direction: row;
     font-family: Arial;
     font-size: 1.2rem;
     font-weight: bold;
@@ -166,6 +184,8 @@ main > .menu {
 }
 
 .fa-plus {
+	display: flex;
+    flex-direction: row;
     height: 3rem;
     padding-left: 0.5rem;
     font-size: 2rem;
@@ -173,38 +193,49 @@ main > .menu {
 }
 
 .search-select {
+	cursor: pointer;
     height: 1.5rem;
+	margin-top: 0rem;
 	margin-right: inherit;
 	padding-left: 0.5rem;
+	display: flex;
+    flex-direction: row;
     border-radius: 2rem;
     outline: 0;
 }
 
 .search-box {
-    padding-left: 0.5rem;
+	margin-top: 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
 }
 
 .search-box > input {
     padding: 0.2rem;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    border-radius: 2rem;
     outline: 0;
     margin-top: 0;
 
 }
 
 .search-button {
-    height: 1.5rem;
+    height: 2rem;
+	color: #000;
+	cursor: pointer;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: #550;
+	font-size: 1.5rem;	
 	margin-right: 1rem;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+	margin-bottom: 5rem;
+	margin-top: 1rem;
+    border-radius: 2rem;
     outline: 0;
 }
 
 .post {
+	background-color: #fff;
     margin: 1rem;
     height: 18rem;
     width: 20rem;
@@ -228,10 +259,13 @@ main > .menu {
 }
 
 .avatar {
+	background-image: url(img/avatar.png);
+	background-size: 100%;
     width: 2rem;
     height: 2rem;
     padding: 0.5rem;
     font-size: 2rem;
+	border-width: 0rem;
     border-radius: 50%;
 }
 
@@ -243,7 +277,7 @@ main > .menu {
 
 .delete-button{
     background-color: inherit;
-    border: 0;
+    border: 1;
     outline: 0;
 }
 
@@ -301,7 +335,7 @@ main > .menu {
 }
 
 main > footer {
-
+	z-index: 1;
     width: 100%;
     min-height: 3rem;
     font-family: Arial;
@@ -314,7 +348,7 @@ footer > .title-foot {
     font-weight: bold;
     display: flex;
     flex-grow: 1;
-    color: #880;
+    color: #777;
     padding-left: 2rem;
     flex-direction: column;
     justify-content: center;

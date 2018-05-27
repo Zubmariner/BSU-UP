@@ -1,7 +1,7 @@
 
 const invoker = (function () {
 
-    let user = 'John Cage';
+    let user = 'Jimmy Raynor';
     let postsRendered = 0;
     const postsAmountToRender = 10;
     let filterConfig = {};

@@ -1,4 +1,4 @@
-const postManager = (function () {
+postManager = (function () {
 
     let photoPosts = JSON.parse(localStorage.getItem('data'));
     if (!photoPosts) {
