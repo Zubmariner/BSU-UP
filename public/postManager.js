@@ -1,6 +1,6 @@
 const postManager = (function () {
 
-    let photoPosts = JSON.parse(localStorage.getItem('data'));
+    let photoPosts = JSON.parse(localStorage.getItem('photoPosts'));
     if (!photoPosts) {
         photoPosts = Posts;
     } else {
@@ -10,9 +10,9 @@ const postManager = (function () {
     }
     window.addEventListener('beforeunload', function () {
         if (!photoPosts) {
-            localStorage.setItem('data', JSON.stringify(Posts));
+            localStorage.setItem('photoPosts', JSON.stringify(Posts));
         } else {
-            localStorage.setItem('data', JSON.stringify(photoPosts));
+            localStorage.setItem('photoPosts', JSON.stringify(photoPosts));
         }
     });
 
@@ -83,7 +83,7 @@ const postManager = (function () {
                 return false;
             }
             photoPosts.push(photoPost);
-            postRenderer.addPost(photoPost);
+            dom.addPost(photoPost);
             return true;
         }
         return false;
@@ -104,7 +104,7 @@ const postManager = (function () {
             if (photoPost.hashtags) {
                 temp.hashtags = photoPost.hashtags;
             }
-            postRenderer.editPost(temp.id, temp);
+            dom.editPost(temp.id, temp);
             return true;
         }
         return false;
@@ -117,7 +117,7 @@ const postManager = (function () {
         for (let i = 0; i < photoPosts.length; i++) {
             if (photoPosts[i].id === id.toString()) {
                 photoPosts.splice(i, 1);
-                postRenderer.removePost(id);
+                dom.removePost(id);
                 return true;
             }
         }

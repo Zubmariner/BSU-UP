@@ -270,12 +270,14 @@ main > .menu {
 }
 
 .edit-button{
+    cursor: pointer;
     background-color: inherit;
     border: 0;
     outline: 0;
 }
 
 .delete-button{
+    cursor: pointer;
     background-color: inherit;
     border: 1;
     outline: 0;
@@ -323,6 +325,7 @@ main > .menu {
 }
 
 .load-more {
+    cursor: pointer;
     width: 7rem;
     min-height: 2rem;
     margin: auto;

@@ -1,6 +1,8 @@
-invoker.showUser();
-invoker.renderMore({});
-invoker.addEventListeners();
+userWork.showUser();
+
+userWork.renderMore({});
+
+userWork.addEventListeners();
 
 
 
