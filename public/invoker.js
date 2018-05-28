@@ -1,5 +1,4 @@
-
-const invoker = (function () {
+﻿const invoker = (function () {
 
     let user = 'Jimmy Raynor';
     let postsRendered = 0;

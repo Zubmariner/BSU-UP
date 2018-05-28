@@ -1,4 +1,4 @@
-const postRenderer = (function () {
+﻿const postRenderer = (function () {
 
     const postsContainer = document.getElementById('#posts-container');
 
