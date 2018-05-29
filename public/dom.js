@@ -1,11 +1,11 @@
-﻿const dom = (function () {
+﻿dom = (function () {
 
-    const postsContainer = document.getElementById('#posts-container');
+    postsContainer = document.getElementById('#posts-container');
 
     function renderPost(post) {
-        const template = getTemplate(post);
-        const modalTemplate = getModalTemplate(post);
-        const postElement = getPostElement(template, modalTemplate, post.id);
+        template = getTemplate(post);
+        modalTemplate = getModalTemplate(post);
+        postElement = getPostElement(template, modalTemplate, post.id);
         postsContainer.appendChild(postElement);
         if (userWork.user === post.author) {
             renderUserButtons(post);
@@ -13,7 +13,7 @@
     }
 
     function renderUserButtons(post) {
-        const editButtons = document.createElement('div');
+        editButtons = document.createElement('div');
         editButtons.classList.add('edit-Buttons');
         editButtons.appendChild(getEditButton(post));
         editButtons.appendChild(getDeleteButton(post));
@@ -21,7 +21,7 @@
     }
 
     function getEditButton(post) {
-        const editButton = document.createElement('button');
+        editButton = document.createElement('button');
         editButton.classList.add('edit-button');
         editButton.innerHTML = `
         <i class="material-icons">edit</i>`;
@@ -62,11 +62,11 @@
             </div>
             `;
         editModal.children[0].children[4].addEventListener('click', function () {
-            const desc = editModal.children[0].children[2].children[1];
-            const loc = editModal.children[0].children[0].children[1];
-            const photo = editModal.children[0].children[1].children[1];
-            const hash = editModal.children[0].children[3].children[1];
-            const updatePost = {
+            desc = editModal.children[0].children[2].children[1];
+            loc = editModal.children[0].children[0].children[1];
+            photo = editModal.children[0].children[1].children[1];
+            hash = editModal.children[0].children[3].children[1];
+            updatePost = {
                 location: loc.value,
                 description: desc.value,
                 photoLink: photo.value,
@@ -92,16 +92,16 @@
     }
 
     function removePost(id) {
-        const postToRemove = postsContainer.querySelector(`#${getPostId(id)}`);
+        postToRemove = postsContainer.querySelector(`#${getPostId(id)}`);
         postsContainer.removeChild(postToRemove);
         userWork.decreasePostsRendered();
     }
 
     function editPost(id, newPost) {
-        const postToEdit = postsContainer.querySelector(`#${getPostId(id)}`);
-        const template = getTemplate(newPost);
-        const modalTemplate = getModalTemplate(newPost);
-        const updatedPost = getPostElement(template, modalTemplate, newPost.id);
+        postToEdit = postsContainer.querySelector(`#${getPostId(id)}`);
+        template = getTemplate(newPost);
+        modalTemplate = getModalTemplate(newPost);
+        updatedPost = getPostElement(template, modalTemplate, newPost.id);
         postsContainer.replaceChild(updatedPost, postToEdit);
         if (userWork.user === newPost.author) {
             renderUserButtons(newPost);
@@ -109,9 +109,9 @@
     }
 
     function addPost(post) {
-        const template = getTemplate(post);
-        const modalTemplate = getModalTemplate(post);
-        const postElement = getPostElement(template, modalTemplate, post.id);
+        template = getTemplate(post);
+        modalTemplate = getModalTemplate(post);
+        postElement = getPostElement(template, modalTemplate, post.id);
         postsContainer.insertBefore(postElement, postsContainer.getElementsByClassName('post')[0]);
         userWork.increasePostsRendered();
         if (userWork.user === post.author) {
@@ -171,7 +171,7 @@
     }
 
     function getPostElement(template, modalTemplate, id) {
-        const postElement = document.createElement('div');
+        postElement = document.createElement('div');
         postElement.classList.add('post');
         postElement.id = getPostId(id);
         postElement.innerHTML = template;

@@ -1,4 +1,4 @@
-const postManager = (function () {
+postManager = (function () {
 
     let photoPosts = JSON.parse(localStorage.getItem('photoPosts'));
     if (!photoPosts) {
@@ -148,4 +148,3 @@ const postManager = (function () {
         maxId
     };
 }());
-

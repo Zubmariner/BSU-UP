@@ -1,25 +1,25 @@
-﻿const userWork = (function () {
+﻿userWork = (function () {
 
     let user = 'Till Lindemann';
     let postsRendered = 0;
-    const postsAmountToRender = 10;
+    postsAmountToRender = 10;
     let filterConfig = {};
 
 
     function addEventListeners() {
         document.getElementById('add-post-button').addEventListener('click', function (event) {
             document.getElementById('mc-id').style.display = "flex";
-            const addModal = getAddModal();
+            addModal = getAddModal();
             addModal.addEventListener('click', function (event) {
                 event.stopPropagation();
             });
             document.getElementById('mc-id').appendChild(addModal);
             document.getElementById('add-submit').addEventListener('click', function (event) {
-                const desc = document.getElementById('desc-id');
-                const loc = document.getElementById('loc-id');
-                const photo = document.getElementById('img-text-id');
-                const hash = document.getElementById('hash-id');
-                const post = {
+                desc = document.getElementById('desc-id');
+                loc = document.getElementById('loc-id');
+                photo = document.getElementById('img-text-id');
+                hash = document.getElementById('hash-id');
+                post = {
                     author: user,
                     location: loc.value,
                     description: desc.value,
@@ -43,7 +43,7 @@
             postsRendered = 0;
             document.getElementById("#posts-container").innerHTML = '';
             let filterValue = document.getElementById("search-box").value;
-            const selector = document.getElementById("search-select");
+            selector = document.getElementById("search-select");
             if (selector.selectedIndex === 0) {
                 filterConfig = {
                     hashtags: filterValue.split(" ")
@@ -67,7 +67,7 @@
     }
 
     function renderMore(filterConfig) {
-        const postsToTake = postsRendered + postsAmountToRender > postManager.getLength() ?
+        postsToTake = postsRendered + postsAmountToRender > postManager.getLength() ?
             postManager.getLength() - postsRendered :
             postsAmountToRender;
         let postsToRender = postManager.getPhotoPosts(filterConfig, postsRendered, postsToTake);
@@ -89,7 +89,7 @@
     }
 
     function showUser() {
-        const header = document.getElementById('header');
+        header = document.getElementById('header');
         let userInfo = document.createElement('span');
         userInfo.classList.add('user-info');
         header.insertBefore(userInfo, header.getElementsByTagName('i')[0]);
@@ -102,7 +102,7 @@
     }
 
     function getAddModal() {
-        const editModal = document.createElement('div');
+        editModal = document.createElement('div');
         editModal.classList.add('modal');
         editModal.innerHTML = `
             <div class = "edit-content">

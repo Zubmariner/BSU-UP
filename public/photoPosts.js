@@ -1,4 +1,4 @@
-const Posts = [
+Posts = [
     {
         id: '1',
         author: 'Jack Sparrow',
